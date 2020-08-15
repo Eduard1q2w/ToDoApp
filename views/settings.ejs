@@ -1,0 +1,85 @@
+<%- include("partials/header") %>/
+<link rel="stylesheet" type="text/css" href="/stylesheets/settings.css">
+
+<div class="container">
+    <div class="row profile">
+		<div class="col-md-3">
+			<div class="profile-sidebar">
+				<!-- SIDEBAR USERPIC -->
+				<div class="profile-userpic">
+					<!-- <img src="http://keenthemes.com/preview/metronic/theme/assets/admin/pages/media/profile/profile_user.jpg" class="img-responsive" alt=""> -->
+				</div>
+			
+				<div class="profile-usertitle">
+				<span><%= currentUser.username %></span>
+					<div class="profile-usertitle-job">
+						Rank 1
+					</div>
+				</div>
+				
+				<div class="profile-userbuttons">
+					<button type="button" class="btn btn-success btn-sm">Follow</button>
+					<button type="button" class="btn btn-danger btn-sm">Activity</button>
+				</div>
+				<br>
+				<div class="d-flex" id="wrapper">
+
+					<!-- Sidebar -->
+					<div class="bg-light border-right" id="sidebar-wrapper">
+					  <div class="list-group list-group-flush">
+						<a href="/progress" class="nbs list-group-item list-group-item-action bg-light">Dashboard</a>
+						<a href="/application" class="nbs list-group-item list-group-item-action bg-light">Tasks</a>
+						<a href="/notif" class="nbs list-group-item list-group-item-action bg-light">Notifications</a>
+						<a href="/profile" class="nbs list-group-item list-group-item-action bg-light">Profile</a>
+						<a href="/settings" class="nbs list-group-item list-group-item-action bg-light">Settings</a>
+					  </div>
+					</div>
+				</div>
+				
+				
+			</div>
+		</div>
+		<div class="col-md-9">
+            <div class="profile-content">
+				<div class="rightbox">
+			  <h1>
+				  Personal Info
+				</h1> 
+				
+				<h2>
+					Full Name
+				</h2>
+				<input type="text" class="input" placeholder="Full Name">
+				
+				<h2>
+					Username
+				</h2>
+				<input type="text" class="input" placeholder="<%= currentUser.username %>">
+				
+				<h2>
+					Birthday
+				</h2>
+				<input type="date" class="input">
+				
+				<h2>
+					Gender
+				</h2>
+				<input type="text" class="input" placeholder="Male">
+				
+				<h2>
+					password
+				</h2>
+				<input type="password" class="input" value="password">
+				
+				<input type="submit" class="btn btn-success" value="Update!">
+				
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<center>
+
+</center>
+
+<%- include("partials/footer") %>
