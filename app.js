@@ -44,11 +44,6 @@ app.use(function(req,res,next){
 	next();
 });
 
-// app.use(function(req,res,next){
-// 	res.locals.todoTasks= todoTask;
-// 	next();
-// });
-
 app.get("/",function(req,res){
 	res.render("landing")
 });
@@ -126,6 +121,8 @@ app.get("/settings",function(req,res){
 	res.render("settings")
 });
 
+
+
 //TODO
 
 app.post('/application',async (req, res) => {
@@ -143,7 +140,7 @@ res.redirect("/");
 
 app.get("/application", (req, res) => {
 TodoTask.find({}, (err, tasks) => {
-res.render("application.ejs", { test : 2 });
+res.render("application.ejs", { todoTasks: tasks});
 });
 });
 
