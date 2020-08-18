@@ -96,7 +96,7 @@ app.get("/login",function(req,res){
 
 app.post("/login",passport.authenticate("local",
 	{
-	successRedirect:"/application",
+	successRedirect:"/profile",
 	failureRedirect:"/login"
 	}),function(req,res){
 
@@ -111,7 +111,7 @@ app.get("/logout",function(req,res){
 
 // PROFILE
 
-app.get("/profile",function(req,res){
+app.get("/profile",isLoggedIn,function(req,res){
 	res.render("profile")
 });
 
